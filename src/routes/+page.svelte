@@ -2,6 +2,14 @@
 	import Formulary from '$lib/components/Formulary.svelte';
 </script>
 
+<svelte:head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Site pessoal de Ricardo Teixeira dos Santos" />
+	<meta name="author" content="Ricardo Teixeira" />
+	<title>Ricardo Teixeira</title>
+</svelte:head>
+
 <!-- Container Geral -->
 <div
 	class="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#0A141F] to-[#132A42] p-4"
@@ -38,7 +46,6 @@
 				<div
 					class="grid grid-cols-[max-content_1fr] gap-x-2 gap-y-1 overflow-hidden text-[#888888]"
 				>
-					<span class="font-medium">Naturalidade:</span><span class="text-white">Brasileiro</span>
 					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
 				</div>
 			</div>
