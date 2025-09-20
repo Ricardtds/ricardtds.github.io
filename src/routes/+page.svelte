@@ -1,3 +1,7 @@
+<script>
+	import Formulary from '$lib/components/Formulary.svelte';
+</script>
+
 <!-- Container Geral -->
 <div
 	class="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#0A141F] to-[#132A42] p-4"
@@ -35,10 +39,6 @@
 					class="grid grid-cols-[max-content_1fr] gap-x-2 gap-y-1 overflow-hidden text-[#888888]"
 				>
 					<span class="font-medium">Naturalidade:</span><span class="text-white">Brasileiro</span>
-					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
-					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
-					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
-					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
 					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
 				</div>
 			</div>
@@ -321,38 +321,9 @@
 		<!-- Seção: Contato -->
 		<section id="contato" class="flex flex-col gap-8 md:flex-row">
 			<!-- Formulário -->
-			<!-- Formulário -->
 			<div class="flex flex-1 flex-col gap-5">
 				<h3 class="text-center text-2xl font-bold md:text-left">Envie um alô</h3>
-				<form class="flex flex-col gap-3">
-					<input
-						type="text"
-						placeholder="Seu Nome Completo"
-						class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-black placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-					/>
-					<input
-						type="text"
-						placeholder="Seu Assunto"
-						class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-black placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-					/>
-					<input
-						type="email"
-						placeholder="Seu Email"
-						class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-black placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-					/>
-					<textarea
-						placeholder="Sua Mensagem"
-						rows="5"
-						class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-black placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-					></textarea>
-					<div class="flex justify-start">
-						<button
-							type="submit"
-							class="rounded-full bg-[#F9C756] px-6 py-2 font-bold text-black transition hover:brightness-105"
-							>Enviar</button
-						>
-					</div>
-				</form>
+				<Formulary endpoint="https://formspree.io/f/mgvlgdge" />
 			</div>
 
 			<!-- Informações de Contato -->
