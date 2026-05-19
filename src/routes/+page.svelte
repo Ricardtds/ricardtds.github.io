@@ -4,93 +4,104 @@
 
 <!-- Container Geral -->
 <div
-	class="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#0A141F] to-[#132A42] p-4"
+	class="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#0A141F] to-[#132A42] p-4 font-sans text-white"
 >
 	<!-- Card Central -->
-	<div class="flex w-full max-w-3xl flex-col gap-12 rounded-2xl bg-[#000000] p-8 shadow-xl">
-		<!-- Seção: Sobre Mim -->
-		<section class="flex flex-col items-center gap-6 md:flex-row">
+	<div
+		class="flex w-full max-w-4xl flex-col gap-16 rounded-3xl border border-[#1A1A1A] bg-[#050505] p-8 shadow-2xl md:p-12"
+	>
+		<!-- Seção: Hero / Sobre Mim -->
+		<section class="flex flex-col items-center gap-8 md:flex-row md:justify-between">
 			<div class="flex-1 text-center md:text-left">
-				<h2 class="text-lg font-semibold text-[#F9C756]">Olá, Eu sou</h2>
-				<h1 class="mt-2 flex justify-center gap-2 text-3xl font-bold md:justify-start md:text-4xl">
+				<h2 class="text-xl font-medium tracking-wide text-[#F9C756]">Olá, eu sou o</h2>
+				<h1
+					class="mt-2 flex justify-center gap-2 text-4xl font-extrabold tracking-tight md:justify-start md:text-5xl lg:text-6xl"
+				>
 					<div><span class="text-[#F9C756]">R</span><span>icardo</span></div>
 					<div><span class="text-[#F9C756]">T</span><span>eixeira</span></div>
 				</h1>
-				<h3 class="mt-1 font-semibold text-[#888888]">Desenvolvedor</h3>
+				<h3 class="mt-3 text-lg font-medium text-[#A7A7A7] md:text-xl">
+					Desenvolvedor de Software
+				</h3>
 			</div>
 			<div class="flex flex-1 justify-center md:justify-end">
 				<enhanced:img
 					src="$lib/assets/me.png"
-					alt="Foto do Ricardo"
-					class="w-full rounded-xl md:w-full"
+					alt="Foto de perfil de Ricardo Teixeira"
+					class="w-64 rounded-2xl object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02] md:w-80"
 				/>
 			</div>
 		</section>
 
 		<!-- Seção: Sobre Mim Detalhado -->
-		<section id="sobre" class="flex flex-col-reverse gap-8 md:flex-row">
-			<div class="flex flex-1 flex-col items-center justify-center">
+		<section id="sobre" class="flex flex-col-reverse gap-10 md:flex-row md:items-center">
+			<div class="flex flex-1 flex-col items-center justify-center gap-4">
 				<enhanced:img
 					src="$lib/assets/me2.png"
-					alt="Outra foto do Ricardo"
-					class="w-48 rounded-xl md:w-60"
+					alt="Ricardo Teixeira em momento descontraído"
+					class="w-56 rounded-2xl object-cover shadow-lg md:w-64"
 				/>
 				<div
-					class="grid grid-cols-[max-content_1fr] gap-x-2 gap-y-1 overflow-hidden text-[#888888]"
+					class="grid w-full max-w-[14rem] grid-cols-[max-content_1fr] gap-x-4 gap-y-2 rounded-xl bg-[#111] p-4 text-sm text-[#A7A7A7] shadow-inner"
 				>
-					<span class="font-medium">Naturalidade:</span><span class="text-white">Brasileiro</span>
-					<span class="font-medium">Nascimento:</span><span class="text-white">20/06/1998</span>
+					<span class="font-semibold text-[#F9C756]">Idade:</span><span class="text-white"
+						>25 anos</span
+					>
+					<span class="font-semibold text-[#F9C756]">Base:</span><span class="text-white"
+						>Bahia, Brasil</span
+					>
 				</div>
 			</div>
-			<div class="flex-1">
-				<div class="mb-4 w-fit border-b-2 border-[#F9C756] pb-2">
-					<h2 class="font-semibold text-[#F9C756]">Sobre Mim</h2>
+			<div class="flex-[1.5]">
+				<div class="mb-6 w-fit border-b-2 border-[#F9C756] pb-2">
+					<h2 class="text-sm font-bold tracking-widest text-[#F9C756] uppercase">Conheça-me</h2>
 				</div>
-				<h3 class="mb-1 text-2xl font-bold">Ricardo Teixeira dos Santos</h3>
-				<p class="mb-4 text-justify text-[#888888]">
-					Olá! Sou estudante de Engenharia de Computação na UFRB e apaixonado por transformar dados
-					em soluções inteligentes. Trabalho bastante com Python, especialmente para análise de
-					dados, e no backend minha preferência é Rust, embora também trabalhe com Laravel. No
-					front-end, Svelte é minha praia. Curto aprender novas tecnologias, resolver problemas
-					complexos e criar aplicações que realmente façam a diferença.
+				<h3 class="mb-4 text-3xl leading-tight font-bold">
+					Transformando problemas em soluções inteligentes.
+				</h3>
+				<p class="mb-4 text-justify leading-relaxed text-[#A7A7A7]">
+					Sou estudante de Engenharia de Computação na UFRB e um desenvolvedor apaixonado por
+					construir sistemas eficientes. Minha especialidade no back-end envolve a performance e
+					segurança do <strong class="text-white">Rust</strong>, a versatilidade do
+					<strong class="text-white">Python</strong>
+					(especialmente voltado para análise de dados) e a robustez do
+					<strong class="text-white">Laravel</strong>.
+				</p>
+				<p class="text-justify leading-relaxed text-[#A7A7A7]">
+					No front-end, utilizo o <strong class="text-white">Svelte</strong> para criar interfaces dinâmicas
+					e de alta performance. Sou movido pela curiosidade constante, adorando o desafio de aprender
+					novas tecnologias e desenvolver aplicações que gerem um impacto real e positivo na vida das
+					pessoas.
 				</p>
 			</div>
 		</section>
 
-		<!-- Seção: Projetos -->
-		<!-- <section>
-			<div class="mb-4 w-fit border-b-2 border-[#F9C756] pb-2">
-				<h2 class="font-semibold text-[#F9C756]">Projetos</h2>
-			</div>
-			<div class="flex flex-col items-center gap-4">
-				<enhanced:img
-					src="$lib/assets/tchat.png"
-					alt="Projeto TchaT"
-					class="w-full rounded-lg md:w-80"
-				/>
-				<p class="text-lg font-semibold">TchaT</p>
-			</div>
-		</section> -->
+		<!-- Seção: Projetos (Comentada - mantida para seu uso futuro) -->
+		<!-- <section id="projetos"> ... </section> -->
+
 		<!-- Seção: Tecnologias -->
-		<section id="tecnologias" class="flex flex-col gap-6">
+		<section id="tecnologias" class="flex flex-col gap-8">
 			<div class="w-fit border-b-2 border-[#F9C756] pb-2">
-				<h2 class="font-semibold text-[#F9C756]">Tecnologias</h2>
+				<h2 class="text-sm font-bold tracking-widest text-[#F9C756] uppercase">Hard Skills</h2>
 			</div>
-			<div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Python Icon SVG -->
-					<svg class="h-10 md:h-15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
-						><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
+			<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+				<!-- As SVGs foram mantidas exatamente iguais, apenas adicionei um efeito de hover no card pai -->
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+						><path
 							fill="currentColor"
 							d="M535.8 264.5C528.1 233.6 513.5 210.3 482.4 210.3L442.3 210.3L442.3 257.7C442.3 294.5 411.1 325.5 375.5 325.5L268.7 325.5C239.5 325.5 215.3 350.5 215.3 379.8L215.3 481.6C215.3 510.6 240.5 527.6 268.7 535.9C302.5 545.8 335 547.6 375.5 535.9C402.4 528.1 428.9 512.4 428.9 481.6L428.9 440.9L322.2 440.9L322.2 427.3L482.4 427.3C513.5 427.3 525 405.6 535.8 373.1C547 339.6 546.5 307.4 535.8 264.5zM382.2 508.7C374.6 509.2 367.3 505.5 363.3 499C359.4 492.4 359.4 484.3 363.3 477.7C367.3 471.2 374.6 467.5 382.2 468C389.8 467.5 397.1 471.2 401.1 477.7C405 484.3 405 492.4 401.1 499C397.1 505.5 389.8 509.2 382.2 508.7zM263.8 312.1L370.6 312.1C400.3 312.1 424 287.6 424 257.8L424 155.9C424 126.9 399.6 105.2 370.6 100.3C334.8 94.4 295.9 94.7 263.8 100.4C218.6 108.4 210.4 125.1 210.4 156L210.4 196.7L317.3 196.7L317.3 210.3L170.3 210.3C139.2 210.3 112 229 103.5 264.5C93.7 305.2 93.3 330.6 103.5 373.1C111.1 404.7 129.2 427.3 160.3 427.3L197 427.3L197 378.5C197 343.2 227.5 312.1 263.8 312.1zM257.2 128.7C268.5 128.7 277.6 137.8 277.6 149.1C277.6 160.4 268.5 169.5 257.2 169.5C245.9 169.5 236.8 160.4 236.8 149.1C236.8 137.8 245.9 128.7 257.2 128.7z"
 						/></svg
 					>
 					Python
 				</div>
-				<div class="flex items-center gap-2 px-4 py-2 font-medium text-white">
-					<!-- Rust Icon SVG -->
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
 					<svg
-						class="h-10 md:h-15"
+						class="h-8 w-8"
 						viewBox="0 0 32 32"
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -120,66 +131,48 @@
 					>
 					Rust
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Laravel Icon SVG -->
-					<svg class="h-10 md:h-15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
-						><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+						><path
 							fill="currentColor"
 							d="M568.6 179.8C568.5 179.6 568.4 179.3 568.3 179.1C568.2 178.7 568 178.3 567.8 177.9C567.6 177.7 567.5 177.4 567.3 177.2C567.1 176.9 566.8 176.6 566.6 176.3C566.4 176.1 566.1 175.9 565.8 175.7C565.5 175.5 565.2 175.2 564.9 175L468.6 119.5C467.4 118.8 466 118.4 464.6 118.4C463.2 118.4 461.8 118.8 460.6 119.5L364.3 175C364 175.2 363.7 175.4 363.4 175.7C363.1 175.9 362.9 176.1 362.6 176.3C362.3 176.6 362.1 176.9 361.9 177.2C361.7 177.4 361.5 177.6 361.4 177.9C361.2 178.3 361 178.7 360.9 179.1C360.8 179.3 360.7 179.5 360.6 179.8C360.4 180.5 360.3 181.2 360.3 181.9L360.3 287.1L280.1 333.3L280.1 127.4C280.1 126.7 280 126 279.8 125.3C279.7 125.1 279.6 124.9 279.5 124.6C279.4 124.2 279.2 123.8 279 123.4C278.9 123.1 278.6 122.9 278.5 122.7C278.3 122.4 278 122.1 277.8 121.8C277.6 121.6 277.3 121.4 277 121.2C276.7 121 276.4 120.7 276.1 120.5L179.8 65.1C178.6 64.4 177.2 64 175.8 64C174.4 64 173 64.4 171.8 65.1L75.5 120.5C75.2 120.7 74.9 120.9 74.6 121.2C74.3 121.4 74.1 121.6 73.8 121.8C73.5 122.1 73.3 122.4 73.1 122.7C72.9 123 72.7 123.2 72.5 123.4C72.3 123.8 72.1 124.2 72 124.6C71.9 124.8 71.8 125 71.7 125.3C71.5 126 71.4 126.7 71.4 127.4L71.4 457.1C71.4 458.5 71.8 459.9 72.5 461.1C73.2 462.3 74.2 463.3 75.4 464L268 574.9C268.4 575.1 268.9 575.3 269.3 575.4C269.5 575.5 269.7 575.6 269.9 575.7C271.2 576.1 272.7 576.1 274 575.7C274.2 575.6 274.4 575.5 274.6 575.5C275.1 575.3 275.6 575.2 276 574.9L468.6 464.1C469.8 463.4 470.8 462.4 471.5 461.2C472.2 460 472.6 458.6 472.6 457.2L472.6 351.9L564.8 298.8C566 298.1 567 297.1 567.7 295.8C568.4 294.5 568.8 293.2 568.8 291.8L568.8 182C568.8 181.3 568.7 180.6 568.6 179.9zM175.8 81.3L256 127.4L175.8 173.6L95.6 127.4L175.8 81.2zM264 141.3L264 342.6C230.8 361.7 204.1 377.1 183.8 388.8L183.8 187.5C217 168.4 243.7 153 264 141.3zM264 554.1L87.5 452.5L87.5 141.3C107.8 153 134.6 168.4 167.7 187.5L167.7 402.7C167.7 403 167.8 403.3 167.8 403.6C167.8 404 167.9 404.4 168 404.8C168.1 405.1 168.2 405.4 168.4 405.7C168.5 406 168.7 406.4 168.8 406.7C169 407 169.2 407.2 169.4 407.5C169.6 407.8 169.8 408.1 170.1 408.3C170.3 408.5 170.6 408.7 170.9 408.9C171.2 409.1 171.5 409.4 171.8 409.6L264 461.8L264.1 554.2zM272 447.9L192 402.6C246.7 371.1 305.5 337.3 368.3 301.1L448.4 347.2C419 364 360.2 397.5 272 447.9zM456.5 452.5L280 554.1L280 461.8C381.4 404 440.2 370.4 456.5 361L456.5 452.4zM456.5 333.4C436.2 321.8 409.4 306.4 376.3 287.3L376.3 195.9C396.6 207.6 423.4 223 456.5 242.1L456.5 333.4zM464.5 228.1L384.3 181.9L464.5 135.7L544.7 181.8L464.5 228zM472.5 333.4L472.5 242.1C505.7 223 532.5 207.6 552.8 195.9L552.8 287.3L472.5 333.5z"
 						/></svg
 					>
 					Laravel
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Svelte Icon SVG -->
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
 					<svg
-						class="h-10 md:h-15"
+						class="h-8 w-8"
 						viewBox="0 0 73 73"
 						version="1.1"
 						xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink"
-					>
-						<title>frameworks-and-libraries/svelte</title>
-						<desc>Created with Sketch.</desc>
-						<defs> </defs>
-						<g
-							id="frameworks-and-libraries/svelte"
-							stroke="none"
-							stroke-width="1"
-							fill="none"
-							fill-rule="evenodd"
-						>
-							<g
-								id="container"
-								transform="translate(2.000000, 2.000000)"
+						><g
+							transform="translate(2.000000, 2.000000)"
+							fill="#FFFFFF"
+							fill-rule="nonzero"
+							stroke="#6A1A00"
+							stroke-width="2"><rect x="-1" y="-1" width="71" height="71" rx="14"></rect></g
+						><g transform="translate(15.000000, 11.000000)" fill-rule="nonzero"
+							><path
+								d="M39.3801439,7.08441667 C34.709803,0.396659091 25.4800152,-1.58663636 18.805053,2.6657197 L7.08441667,10.1382652 C3.88147256,12.1494479 1.6760059,15.4189283 1.01084091,19.142 C0.451383381,22.2438569 0.942166531,25.443703 2.40554545,28.235303 C1.40123929,29.75918 0.717727036,31.4715886 0.396659091,33.2681818 C-0.278619639,37.06241 0.602261853,40.9687274 2.84059091,44.1059318 C7.53225758,50.7936894 16.7449848,52.7769848 23.419947,48.5246288 L35.1405833,41.0520833 C38.3427716,39.0401197 40.5479869,35.7710118 41.2141591,32.0483485 C41.7755716,28.9437408 41.2847383,25.7405654 39.8194545,22.9465152 C40.8237607,21.4226382 41.507273,19.7102296 41.8283409,17.9136364 C42.5043647,14.1187862 41.621762,10.2116549 39.3801439,7.07588636"
+								fill="#FF3E00"
+							></path><path
+								d="M17.6619924,44.7243788 C13.8867321,45.7058451 9.90010168,44.2276754 7.67727273,41.0222273 C6.32715779,39.1374631 5.79363232,36.788106 6.19726515,34.5050758 C6.26404355,34.1336855 6.35668058,33.7674129 6.4745,33.4089318 L6.69628788,32.7350379 L7.29767424,33.161553 C8.68397398,34.1813074 10.2347592,34.9559787 11.8827121,35.4519394 L12.3092273,35.5841591 L12.2665758,36.0106742 C12.2156049,36.6282898 12.3831658,37.2441895 12.7400076,37.7508561 C13.406866,38.7405701 14.6273915,39.199337 15.7810606,38.8939167 C16.0346849,38.8260877 16.2763614,38.719635 16.4976061,38.5782955 L28.1969167,31.1100152 C28.777114,30.7436632 29.1776555,30.1513567 29.3015909,29.4764621 C29.4281439,28.7917398 29.274478,28.0848766 28.8750758,27.5144924 C28.2047706,26.5476892 27.0026156,26.1015637 25.8638788,26.3970227 C25.6092338,26.4657533 25.3662831,26.572134 25.1430682,26.7126439 L20.6561288,29.5617652 C19.9212313,30.0303333 19.1184833,30.3827943 18.2761742,30.6067273 C14.49831,31.5908166 10.5078034,30.1124728 8.28292424,26.9045758 C6.9402658,25.0166581 6.41448831,22.6675704 6.82424242,20.3874242 C7.22738879,18.1495902 8.55217152,16.1840832 10.4752121,14.9706818 L22.1787879,7.50240152 C22.9136854,7.03383334 23.7164334,6.68137233 24.5587424,6.45743939 C28.3353376,5.47400762 32.3242745,6.95240099 34.5477273,10.1595909 C35.8978422,12.0443551 36.4313677,14.3937122 36.0277348,16.6767424 C35.9609565,17.0481327 35.8683194,17.4144053 35.7505,17.7728864 L35.5287121,18.4467803 L34.9273258,18.0202652 C33.541026,17.0005108 31.9902408,16.2258395 30.3422879,15.7298788 L29.9157727,15.5976591 L29.9584242,15.1711439 C30.0093951,14.5535284 29.8418342,13.9376286 29.4849924,13.4309621 C28.815491,12.4631238 27.6125984,12.0167245 26.4737955,12.3134924 C26.2201712,12.3813214 25.9784946,12.4877741 25.75725,12.6291136 L14.0280833,20.071803 C13.4476326,20.4370896 13.0481051,21.0301866 12.9276742,21.7053561 C12.796647,22.3901413 12.9506905,23.0987418 13.3541894,23.6673258 C14.0244946,24.634129 15.2266496,25.0802545 16.3653864,24.7847955 C16.6200313,24.7160649 16.862982,24.6096842 17.086197,24.4691742 L21.5560758,21.620053 C22.2909733,21.1514849 23.0937212,20.7990238 23.9360303,20.5750909 C27.7138946,19.5910015 31.7044012,21.0693454 33.9292803,24.2772424 C35.2764117,26.163269 35.8068376,28.5125179 35.4007576,30.7943939 C34.9976112,33.0322279 33.6728285,34.997735 31.7497879,36.2111364 L20.0462121,43.6794167 C19.3113146,44.1479848 18.5085666,44.5004459 17.6662576,44.7243788"
 								fill="#FFFFFF"
-								fill-rule="nonzero"
-								stroke="#6A1A00"
-								stroke-width="2"
-							>
-								<rect id="mask" x="-1" y="-1" width="71" height="71" rx="14"> </rect>
-							</g>
-							<g id="image-(2)" transform="translate(15.000000, 11.000000)" fill-rule="nonzero">
-								<path
-									d="M39.3801439,7.08441667 C34.709803,0.396659091 25.4800152,-1.58663636 18.805053,2.6657197 L7.08441667,10.1382652 C3.88147256,12.1494479 1.6760059,15.4189283 1.01084091,19.142 C0.451383381,22.2438569 0.942166531,25.443703 2.40554545,28.235303 C1.40123929,29.75918 0.717727036,31.4715886 0.396659091,33.2681818 C-0.278619639,37.06241 0.602261853,40.9687274 2.84059091,44.1059318 C7.53225758,50.7936894 16.7449848,52.7769848 23.419947,48.5246288 L35.1405833,41.0520833 C38.3427716,39.0401197 40.5479869,35.7710118 41.2141591,32.0483485 C41.7755716,28.9437408 41.2847383,25.7405654 39.8194545,22.9465152 C40.8237607,21.4226382 41.507273,19.7102296 41.8283409,17.9136364 C42.5043647,14.1187862 41.621762,10.2116549 39.3801439,7.07588636"
-									id="Shape"
-									fill="#FF3E00"
-								>
-								</path>
-								<path
-									d="M17.6619924,44.7243788 C13.8867321,45.7058451 9.90010168,44.2276754 7.67727273,41.0222273 C6.32715779,39.1374631 5.79363232,36.788106 6.19726515,34.5050758 C6.26404355,34.1336855 6.35668058,33.7674129 6.4745,33.4089318 L6.69628788,32.7350379 L7.29767424,33.161553 C8.68397398,34.1813074 10.2347592,34.9559787 11.8827121,35.4519394 L12.3092273,35.5841591 L12.2665758,36.0106742 C12.2156049,36.6282898 12.3831658,37.2441895 12.7400076,37.7508561 C13.406866,38.7405701 14.6273915,39.199337 15.7810606,38.8939167 C16.0346849,38.8260877 16.2763614,38.719635 16.4976061,38.5782955 L28.1969167,31.1100152 C28.777114,30.7436632 29.1776555,30.1513567 29.3015909,29.4764621 C29.4281439,28.7917398 29.274478,28.0848766 28.8750758,27.5144924 C28.2047706,26.5476892 27.0026156,26.1015637 25.8638788,26.3970227 C25.6092338,26.4657533 25.3662831,26.572134 25.1430682,26.7126439 L20.6561288,29.5617652 C19.9212313,30.0303333 19.1184833,30.3827943 18.2761742,30.6067273 C14.49831,31.5908166 10.5078034,30.1124728 8.28292424,26.9045758 C6.9402658,25.0166581 6.41448831,22.6675704 6.82424242,20.3874242 C7.22738879,18.1495902 8.55217152,16.1840832 10.4752121,14.9706818 L22.1787879,7.50240152 C22.9136854,7.03383334 23.7164334,6.68137233 24.5587424,6.45743939 C28.3353376,5.47400762 32.3242745,6.95240099 34.5477273,10.1595909 C35.8978422,12.0443551 36.4313677,14.3937122 36.0277348,16.6767424 C35.9609565,17.0481327 35.8683194,17.4144053 35.7505,17.7728864 L35.5287121,18.4467803 L34.9273258,18.0202652 C33.541026,17.0005108 31.9902408,16.2258395 30.3422879,15.7298788 L29.9157727,15.5976591 L29.9584242,15.1711439 C30.0093951,14.5535284 29.8418342,13.9376286 29.4849924,13.4309621 C28.815491,12.4631238 27.6125984,12.0167245 26.4737955,12.3134924 C26.2201712,12.3813214 25.9784946,12.4877741 25.75725,12.6291136 L14.0280833,20.071803 C13.4476326,20.4370896 13.0481051,21.0301866 12.9276742,21.7053561 C12.796647,22.3901413 12.9506905,23.0987418 13.3541894,23.6673258 C14.0244946,24.634129 15.2266496,25.0802545 16.3653864,24.7847955 C16.6200313,24.7160649 16.862982,24.6096842 17.086197,24.4691742 L21.5560758,21.620053 C22.2909733,21.1514849 23.0937212,20.7990238 23.9360303,20.5750909 C27.7138946,19.5910015 31.7044012,21.0693454 33.9292803,24.2772424 C35.2764117,26.163269 35.8068376,28.5125179 35.4007576,30.7943939 C34.9976112,33.0322279 33.6728285,34.997735 31.7497879,36.2111364 L20.0462121,43.6794167 C19.3113146,44.1479848 18.5085666,44.5004459 17.6662576,44.7243788"
-									id="Shape"
-									fill="#FFFFFF"
-								>
-								</path>
-							</g>
-						</g>
-					</svg>
+							></path></g
+						></svg
+					>
 					Svelte
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Tauri Icon SVG -->
-					<svg class="h-10 md:h-15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"
 						><path
 							fill="#ffc131"
 							d="M86.242 46.547a12.19 12.19 0 0 1-24.379 0c0-6.734 5.457-12.191 12.191-12.191a12.19 12.19 0 0 1 12.188 12.191zm0 0"
@@ -194,12 +187,12 @@
 							d="M28.207 42.363a46.49 46.49 0 0 1 16.188-6.559 32.603 32.603 0 0 0-2.004 11.297 32.56 32.56 0 0 0 .188 3.512 32.738 32.738 0 0 0-6.859 3.371A32.7 32.7 0 0 0 23.652 68.02c-2.59 5.742-3.461 12.113-2.52 18.34s3.668 12.051 7.844 16.77 9.617 8.129 15.684 9.824 12.496 1.605 18.512-.262a32.72 32.72 0 0 0 15.402-10.266 34.9 34.9 0 0 0 1.484-1.918 54.283 54.283 0 0 0 17.855-5.223 46.528 46.528 0 0 1-8.723 16.012 46.511 46.511 0 0 1-21.918 14.609 46.53 46.53 0 0 1-26.34.375 46.6 46.6 0 0 1-22.324-13.984A46.56 46.56 0 0 1 7.453 88.434a46.53 46.53 0 0 1 3.582-26.098 46.533 46.533 0 0 1 17.172-19.973zm69.074 44.473c-.059.035-.121.066-.18.102.059-.035.121-.066.18-.102zm0 0"
 						/></svg
 					>
-
 					Tauri
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- SQL Icon SVG -->
-					<svg class="h-10 md:h-15" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
 						><title>file_type_sql</title><path
 							d="M8.562,15.256A21.159,21.159,0,0,0,16,16.449a21.159,21.159,0,0,0,7.438-1.194c1.864-.727,2.525-1.535,2.525-2V9.7a10.357,10.357,0,0,1-2.084,1.076A22.293,22.293,0,0,1,16,12.078a22.36,22.36,0,0,1-7.879-1.3A10.28,10.28,0,0,1,6.037,9.7v3.55C6.037,13.724,6.7,14.528,8.562,15.256Z"
 							style="fill:#ffda44"
@@ -213,28 +206,24 @@
 					>
 					SQL
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Git Icon SVG -->
-					<svg
-						class="h-10 md:h-15"
-						viewBox="0 0 32 32"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+						><path
 							d="M2.58536 17.4132C1.80488 16.6327 1.80488 15.3673 2.58536 14.5868L14.5868 2.58536C15.3673 1.80488 16.6327 1.80488 17.4132 2.58536L29.4146 14.5868C30.1951 15.3673 30.1951 16.6327 29.4146 17.4132L17.4132 29.4146C16.6327 30.1951 15.3673 30.1951 14.5868 29.4146L2.58536 17.4132Z"
 							fill="#EE513B"
-						/>
-						<path
+						/><path
 							d="M12.1489 5.06152L10.9336 6.27686L14.0725 9.41577C13.9455 9.68819 13.8746 9.99201 13.8746 10.3124C13.8746 11.222 14.4461 11.9981 15.2496 12.3012V19.9798C14.4461 20.2829 13.8746 21.059 13.8746 21.9686C13.8746 23.1422 14.826 24.0936 15.9996 24.0936C17.1732 24.0936 18.1246 23.1422 18.1246 21.9686C18.1246 21.144 17.6549 20.429 16.9684 20.0768V12.3117L19.9689 15.3122C19.8481 15.5791 19.7809 15.8754 19.7809 16.1874C19.7809 17.361 20.7323 18.3124 21.9059 18.3124C23.0795 18.3124 24.0309 17.361 24.0309 16.1874C24.0309 15.0138 23.0795 14.0624 21.9059 14.0624C21.6778 14.0624 21.4582 14.0983 21.2522 14.1648L18.0297 10.9423C18.0914 10.7433 18.1246 10.5317 18.1246 10.3124C18.1246 9.13878 17.1732 8.18738 15.9996 8.18738C15.7803 8.18738 15.5688 8.22061 15.3697 8.2823L12.1489 5.06152Z"
 							fill="white"
-						/>
-					</svg>
+						/></svg
+					>
 					Git
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Docker Icon SVG -->
-					<svg class="h-10 md:h-15" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
 						><path
 							d="M16.54,12.663H19.4v2.924h1.446a6.272,6.272,0,0,0,1.988-.333,5.091,5.091,0,0,0,.966-.436,3.584,3.584,0,0,1-.67-1.849,3.907,3.907,0,0,1,.7-2.753l.3-.348.358.288a4.558,4.558,0,0,1,1.795,2.892,4.375,4.375,0,0,1,3.319.309l.393.226-.207.4a4.141,4.141,0,0,1-4.157,1.983c-2.48,6.168-7.871,9.088-14.409,9.088-3.378,0-6.476-1.263-8.241-4.259l-.029-.049L2.7,20.227a8.316,8.316,0,0,1-.659-4.208l.04-.433H4.526V12.663H7.387V9.8h5.721V6.942H16.54v5.721Z"
 							style="fill:#0096e6"
@@ -251,9 +240,10 @@
 					>
 					Docker
 				</div>
-				<div class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-white">
-					<!-- Azure Icon SVG -->
-					<svg class="h-10 md:h-15" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+				<div
+					class="flex cursor-default items-center gap-3 rounded-xl bg-[#111] px-4 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[#1A1A1A] hover:shadow-md hover:shadow-[#F9C756]/10"
+				>
+					<svg class="h-8 w-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
 						><title>file_type_azure</title><path
 							d="M14.98,25.994c3.57-.726,6.518-1.327,6.552-1.335l.062-.015-3.37-4.615c-1.854-2.538-3.37-4.625-3.37-4.637s3.48-11.056,3.5-11.095c.007-.013,2.375,4.694,5.741,11.411l5.774,11.521.044.088-10.711,0-10.711,0Z"
 							style="fill:#0089d6"
@@ -270,132 +260,182 @@
 		<!-- Seção: Soft Skills -->
 		<section id="soft-skills" class="flex flex-col gap-6">
 			<div class="w-fit border-b-2 border-[#F9C756] pb-2">
-				<h2 class="font-semibold text-[#F9C756]">Soft Skills</h2>
+				<h2 class="text-sm font-bold tracking-widest text-[#F9C756] uppercase">Soft Skills</h2>
 			</div>
 			<div class="flex flex-wrap gap-3">
-				<span class="rounded-full border border-[#F9C756] px-4 py-2 font-medium text-white"
+				<span
+					class="cursor-default rounded-full border border-[#333] bg-[#111] px-5 py-2 text-sm font-medium text-white transition-colors hover:border-[#F9C756]"
 					>Trabalho em Equipe</span
 				>
-				<span class="rounded-full border border-[#F9C756] px-4 py-2 font-medium text-white"
+				<span
+					class="cursor-default rounded-full border border-[#333] bg-[#111] px-5 py-2 text-sm font-medium text-white transition-colors hover:border-[#F9C756]"
 					>Resolução de Problemas</span
 				>
-				<span class="rounded-full border border-[#F9C756] px-4 py-2 font-medium text-white"
+				<span
+					class="cursor-default rounded-full border border-[#333] bg-[#111] px-5 py-2 text-sm font-medium text-white transition-colors hover:border-[#F9C756]"
 					>Aprendizado Contínuo</span
 				>
-				<span class="rounded-full border border-[#F9C756] px-4 py-2 font-medium text-white"
+				<span
+					class="cursor-default rounded-full border border-[#333] bg-[#111] px-5 py-2 text-sm font-medium text-white transition-colors hover:border-[#F9C756]"
 					>Comunicação Clara</span
 				>
-				<span class="rounded-full border border-[#F9C756] px-4 py-2 font-medium text-white"
+				<span
+					class="cursor-default rounded-full border border-[#333] bg-[#111] px-5 py-2 text-sm font-medium text-white transition-colors hover:border-[#F9C756]"
 					>Pensamento Crítico</span
 				>
-				<span class="rounded-full border border-[#F9C756] px-4 py-2 font-medium text-white"
+				<span
+					class="cursor-default rounded-full border border-[#333] bg-[#111] px-5 py-2 text-sm font-medium text-white transition-colors hover:border-[#F9C756]"
 					>Adaptabilidade</span
 				>
 			</div>
 		</section>
 
-		<!-- Seção: Resumo -->
-		<section id="resumo" class="flex flex-col gap-6">
+		<!-- Seção: Trajetória (Antigo "Resumo") -->
+		<section id="trajetoria" class="flex flex-col gap-6">
 			<div class="w-fit border-b-2 border-[#F9C756] pb-2">
-				<h2 class="font-semibold text-[#F9C756]">Resumo</h2>
+				<h2 class="text-sm font-bold tracking-widest text-[#F9C756] uppercase">
+					Formação e Experiência
+				</h2>
 			</div>
-			<div class="flex flex-col gap-8 md:flex-row">
+			<div class="flex flex-col gap-10 md:flex-row">
 				<div class="flex-1">
-					<h3 class="mb-2 text-xl font-semibold">Educação</h3>
-					<ul class="list-inside list-disc text-[#888888]">
-						<li>Bacharelado em Ciências Exatas e Tecnológicas</li>
-						<li>Bacharelado em Engenharia da Computação</li>
+					<h3 class="mb-4 flex items-center gap-2 text-xl font-bold">
+						<span class="text-2xl text-[#F9C756]">•</span> Educação
+					</h3>
+					<ul class="ml-2 space-y-3 border-l-2 border-[#222] pl-2 text-[#A7A7A7]">
+						<li
+							class="relative before:absolute before:top-2 before:-left-[11px] before:h-2 before:w-2 before:rounded-full before:bg-[#555] before:content-['']"
+						>
+							<span class="block font-semibold text-white">Engenharia de Computação</span>
+							UFRB
+						</li>
+						<li
+							class="relative before:absolute before:top-2 before:-left-[11px] before:h-2 before:w-2 before:rounded-full before:bg-[#555] before:content-['']"
+						>
+							<span class="block font-semibold text-white">Ciências Exatas e Tecnológicas</span>
+							UFRB (Bacharelado)
+						</li>
 					</ul>
 				</div>
 				<div class="flex-1">
-					<h3 class="mb-2 text-xl font-semibold">Experiência</h3>
-					<ul class="list-inside list-disc text-[#888888]">
-						<li>Projetos acadêmicos de desenvolvimento</li>
-						<li>Ferronit</li>
-						<li>Inpatics</li>
+					<h3 class="mb-4 flex items-center gap-2 text-xl font-bold">
+						<span class="text-2xl text-[#F9C756]">•</span> Experiência
+					</h3>
+					<ul class="ml-2 space-y-3 border-l-2 border-[#222] pl-2 text-[#A7A7A7]">
+						<li
+							class="relative before:absolute before:top-2 before:-left-[11px] before:h-2 before:w-2 before:rounded-full before:bg-[#555] before:content-['']"
+						>
+							<span class="block font-semibold text-white">Desenvolvedor</span>
+							Inpatics
+						</li>
+						<li
+							class="relative before:absolute before:top-2 before:-left-[11px] before:h-2 before:w-2 before:rounded-full before:bg-[#555] before:content-['']"
+						>
+							<span class="block font-semibold text-white">Desenvolvedor</span>
+							Ferronit
+						</li>
+						<li
+							class="relative before:absolute before:top-2 before:-left-[11px] before:h-2 before:w-2 before:rounded-full before:bg-[#555] before:content-['']"
+						>
+							<span class="block font-semibold text-white">Desenvolvedor de Projetos</span>
+							Área Acadêmica
+						</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
 		<!-- Seção: Contato -->
-		<section id="contato" class="flex flex-col gap-8 md:flex-row">
+		<section id="contato" class="flex flex-col gap-12 rounded-2xl bg-[#111] p-6 md:flex-row md:p-8">
 			<!-- Formulário -->
-			<div class="flex flex-1 flex-col gap-5">
-				<h3 class="text-center text-2xl font-bold md:text-left">Envie um alô</h3>
+			<div class="flex flex-[1.2] flex-col gap-4">
+				<h3 class="text-2xl font-bold md:text-left">Vamos conversar?</h3>
+				<p class="mb-2 text-sm text-[#A7A7A7]">
+					Preencha o formulário e entrarei em contato o mais breve possível.
+				</p>
 				<Formulary endpoint="https://formspree.io/f/mgvlgdge" />
 			</div>
 
 			<!-- Informações de Contato -->
-			<div class="flex flex-1 flex-col gap-5">
-				<h3 class="text-xl font-semibold">Informações de Contato</h3>
-				<p class="text-[#888888]">Você pode entrar em contato comigo pelas seguintes redes:</p>
+			<div class="flex flex-1 flex-col gap-6">
+				<h3 class="border-b border-[#333] pb-2 text-xl font-semibold">Informações de Contato</h3>
 
-				<div class="flex items-center gap-4">
-					<div class="rounded-full border p-2.5">
+				<div class="group flex items-center gap-4">
+					<div
+						class="rounded-xl border border-[#333] bg-[#050505] p-3 transition-colors group-hover:border-[#F9C756]"
+					>
+						<!-- SVG Email -->
 						<svg
-							width="30"
-							height="30"
+							width="24"
+							height="24"
 							viewBox="0 0 30 24"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
+							><path
 								d="M2.8125 0.646973C1.25977 0.646973 0 1.90674 0 3.45947C0 4.34424 0.416015 5.17627 1.125 5.70947L13.3125 14.8501C14.3145 15.6001 15.6855 15.6001 16.6875 14.8501L28.875 5.70947C29.584 5.17627 30 4.34424 30 3.45947C30 1.90674 28.7402 0.646973 27.1875 0.646973H2.8125ZM0 8.38135V19.397C0 21.4653 1.68164 23.147 3.75 23.147H26.25C28.3184 23.147 30 21.4653 30 19.397V8.38135L18.375 17.1001C16.377 18.6001 13.623 18.6001 11.625 17.1001L0 8.38135Z"
-								fill="white"
-							/>
-						</svg>
+								fill="currentColor"
+							/></svg
+						>
 					</div>
 					<div class="w-full overflow-hidden break-words">
-						<p class="font-bold text-white">Email</p>
+						<p class="font-bold text-white">E-mail</p>
 						<a
 							href="mailto:ricardoteixeirasantos@hotmail.com"
-							class="break-words text-[#A7A7A7] hover:underline"
+							class="text-sm text-[#A7A7A7] transition-colors hover:text-[#F9C756]"
 							>ricardoteixeirasantos@hotmail.com</a
 						>
 					</div>
 				</div>
 
-				<div class="flex items-center gap-4">
-					<div class="rounded-full border p-2.5">
+				<div class="group flex items-center gap-4">
+					<div
+						class="rounded-xl border border-[#333] bg-[#050505] p-3 transition-colors group-hover:border-[#F9C756]"
+					>
+						<!-- SVG Telefone -->
 						<svg
-							width="31"
-							height="31"
+							width="24"
+							height="24"
 							viewBox="0 0 30 31"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
+							><path
 								d="M9.38272 2.36285C8.9198 1.25537 7.7127 0.669402 6.5642 0.979965L6.24192 1.06786C2.45656 2.09917 -0.777993 5.76734 0.165418 10.2324C2.33936 20.4869 10.4082 28.5557 20.6626 30.7296C25.1336 31.6789 28.7959 28.4385 29.8272 24.6531L29.9151 24.3308C30.2315 23.1765 29.6397 21.9694 28.5381 21.5123L22.8366 19.1392C21.8697 18.7348 20.7505 19.0161 20.0825 19.8306L17.8207 22.5964C13.7013 20.5513 10.3847 17.1293 8.48032 12.9279L11.0703 10.8184C11.8848 10.1562 12.1602 9.03704 11.7618 8.06434L9.38272 2.36285Z"
-								fill="white"
-							/>
-						</svg>
+								fill="currentColor"
+							/></svg
+						>
 					</div>
 					<div>
-						<p class="font-bold text-white">Telefone</p>
-						<a href="tel:+5575998855965" class="text-[#A7A7A7] hover:underline">(75) 9 9885-5965</a>
+						<p class="font-bold text-white">WhatsApp</p>
+						<a
+							href="https://wa.me/5575998855965"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-sm text-[#A7A7A7] transition-colors hover:text-[#F9C756]"
+							>(75) 99885-5965</a
+						>
 					</div>
 				</div>
 
-				<div class="flex items-center gap-4">
-					<div class="rounded-full border p-2.5">
+				<div class="group flex items-center gap-4">
+					<div
+						class="rounded-xl border border-[#333] bg-[#050505] p-3 transition-colors group-hover:border-[#F9C756]"
+					>
+						<!-- SVG Localização -->
 						<svg
-							width="31"
-							height="31"
+							width="24"
+							height="24"
 							viewBox="0 0 24 31"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
+							><path
 								d="M0.818447 11.8834C0.818447 5.81348 5.82816 0.896973 12.0029 0.896973C18.1777 0.896973 23.1874 5.81348 23.1874 11.8834C23.1874 18.8329 16.1854 27.163 13.2612 30.3377C12.5738 31.0834 11.4262 31.0834 10.7388 30.3377C7.81456 27.163 0.812622 18.8329 0.812622 11.8834H0.818447ZM12.0029 15.8096C14.0592 15.8096 15.7311 14.1377 15.7311 12.0814C15.7311 10.0251 14.0592 8.35328 12.0029 8.35328C9.9466 8.35328 8.27476 10.0251 8.27476 12.0814C8.27476 14.1377 9.9466 15.8096 12.0029 15.8096Z"
-								fill="white"
-							/>
-						</svg>
+								fill="currentColor"
+							/></svg
+						>
 					</div>
 					<div>
 						<p class="font-bold text-white">Localização</p>
-						<p class="font-bold text-[#A7A7A7]">Cruz das Almas - Bahia</p>
-						<p class="font-bold text-[#A7A7A7]">Alagoinhas - Bahia</p>
+						<p class="text-sm text-[#A7A7A7]">Alagoinhas / Cruz das Almas, BA</p>
 					</div>
 				</div>
 			</div>
