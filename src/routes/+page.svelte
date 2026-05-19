@@ -291,7 +291,7 @@
 		</section>
 
 		<!-- Seção: Trajetória (Antigo "Resumo") -->
-		<section id="trajetoria" class="flex flex-col gap-6">
+		<section id="resumo" class="flex flex-col gap-6">
 			<div class="w-fit border-b-2 border-[#F9C756] pb-2">
 				<h2 class="text-sm font-bold tracking-widest text-[#F9C756] uppercase">
 					Formação e Experiência
