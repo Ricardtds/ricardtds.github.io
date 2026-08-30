@@ -1,89 +1,97 @@
-<script>
-	export let endpoint = ''; // URL do Formspree
+<script lang="ts">
+	let { endpoint = '' } = $props<{ endpoint?: string }>();
 
-	let nome = '';
-	let email = '';
-	let assunto = '';
-	let mensagem = '';
-	let status = '';
+	let nome = $state('');
+	let email = $state('');
+	let assunto = $state('');
+	let mensagem = $state('');
+	let status = $state('');
+	let sending = $state(false);
 
-	async function handleSubmit(e) {
-		e.preventDefault();
-
-		const data = {
-			name: nome,
-			email,
-			subject: assunto,
-			message: mensagem
-		};
+	async function handleSubmit(event: SubmitEvent) {
+		event.preventDefault();
+		sending = true;
+		status = '';
 
 		try {
-			const res = await fetch(endpoint, {
+			const response = await fetch(endpoint, {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Accept: 'application/json'
-				},
-				body: JSON.stringify(data)
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+				body: JSON.stringify({ name: nome, email, subject: assunto, message: mensagem })
 			});
 
-			const result = await res.json();
+			if (!response.ok) throw new Error('Falha ao enviar mensagem');
 
-			if (result.ok || res.status === 200) {
-				status = 'Mensagem enviada com sucesso!';
-				nome = '';
-				email = '';
-				assunto = '';
-				mensagem = '';
-			} else {
-				status = 'Erro ao enviar a mensagem.';
-			}
-		} catch (err) {
-			status = 'Erro ao enviar a mensagem.';
-			console.error(err);
+			status = 'Mensagem enviada. Obrigado pelo contato!';
+			nome = '';
+			email = '';
+			assunto = '';
+			mensagem = '';
+		} catch (error) {
+			status = 'Não foi possível enviar agora. Tente novamente em instantes.';
+			console.error(error);
+		} finally {
+			sending = false;
 		}
 	}
+
+	const fieldClass =
+		'w-full border border-black/10 bg-[#f7f7f4] px-4 py-3 text-sm text-[#171717] placeholder:text-black/30 transition focus:border-[#15958d]/60 focus:ring-2 focus:ring-[#15958d]/10 focus:outline-none';
 </script>
 
-<form class="flex flex-col gap-3" on:submit={handleSubmit}>
-	<input
-		type="text"
-		placeholder="Seu Nome Completo"
-		bind:value={nome}
-		class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-white placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-		required
-	/>
-	<input
-		type="text"
-		placeholder="Seu Assunto"
-		bind:value={assunto}
-		class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-white placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-		required
-	/>
-	<input
-		type="email"
-		placeholder="Seu Email"
-		bind:value={email}
-		class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-white placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-		required
-	/>
-	<textarea
-		placeholder="Sua Mensagem"
-		rows="5"
-		bind:value={mensagem}
-		class="w-full rounded-md bg-[#D4D4D4]/30 px-4 py-2 font-bold text-white placeholder-[#A7A7A7] focus:ring focus:ring-blue-200 focus:outline-none"
-		required
-	></textarea>
-	<div class="flex justify-start">
+<form class="grid gap-4" onsubmit={handleSubmit}>
+	<div class="grid gap-4 sm:grid-cols-2">
+		<label class="grid gap-2 text-[0.65rem] font-bold tracking-[0.1em] text-black/50 uppercase">
+			Nome
+			<input
+				class={fieldClass}
+				type="text"
+				autocomplete="name"
+				placeholder="Como posso chamar você?"
+				bind:value={nome}
+				required
+			/>
+		</label>
+		<label class="grid gap-2 text-[0.65rem] font-bold tracking-[0.1em] text-black/50 uppercase">
+			E-mail
+			<input
+				class={fieldClass}
+				type="email"
+				autocomplete="email"
+				placeholder="voce@exemplo.com"
+				bind:value={email}
+				required
+			/>
+		</label>
+	</div>
+	<label class="grid gap-2 text-[0.65rem] font-bold tracking-[0.1em] text-black/50 uppercase">
+		Assunto
+		<input
+			class={fieldClass}
+			type="text"
+			placeholder="Projeto, oportunidade ou conversa técnica"
+			bind:value={assunto}
+			required
+		/>
+	</label>
+	<label class="grid gap-2 text-[0.65rem] font-bold tracking-[0.1em] text-black/50 uppercase">
+		Mensagem
+		<textarea
+			class={fieldClass}
+			rows="5"
+			placeholder="Conte um pouco sobre o contexto."
+			bind:value={mensagem}
+			required
+		></textarea>
+	</label>
+	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 		<button
 			type="submit"
-			class="rounded-full bg-[#F9C756] px-6 py-2 font-bold text-white transition hover:brightness-105"
+			disabled={sending}
+			class="inline-flex items-center justify-center bg-[#171717] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#15958d] disabled:cursor-wait disabled:opacity-60"
 		>
-			Enviar
+			{sending ? 'Enviando…' : 'Enviar mensagem'}
 		</button>
+		<p class="text-sm text-black/50" aria-live="polite">{status}</p>
 	</div>
 </form>
-
-{#if status}
-	<p class="mt-2 text-white">{status}</p>
-{/if}
