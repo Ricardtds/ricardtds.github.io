@@ -9,14 +9,11 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta name="theme-color" content="#121212" />
 </svelte:head>
-<div class="flex h-lvh w-lvw flex-col font-[Mignon]">
+
+<div class="min-h-screen">
 	<Header />
-
-	<main class="w-full flex-1 overflow-y-auto text-white">
-		{@render children?.()}
-	</main>
-
+	<main class="w-full">{@render children?.()}</main>
 	<Footer />
 </div>
-
